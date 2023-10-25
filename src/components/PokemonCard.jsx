@@ -1,19 +1,22 @@
 import React from "react";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 const PokemonCard = ({ pokemon }) => {
-  const { name } = pokemon;
+  const { name, imageUrl } = pokemon;
 
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia component="img" height="140" alt={name} />
-        <CardContent>
-        </CardContent>
+        <CardMedia
+          component="img"
+          alt={name}
+          height="100"
+          image={imageUrl}
+        />
+        <Typography>{name}</Typography>
       </CardActionArea>
     </Card>
   );

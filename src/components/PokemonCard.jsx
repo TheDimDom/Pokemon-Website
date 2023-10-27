@@ -7,16 +7,19 @@ import Typography from "@mui/material/Typography";
 const PokemonCard = ({ pokemon }) => {
   const { name, imageUrl } = pokemon;
 
+  const pokemonName = name[0].toUpperCase() + name.slice(1);
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          alt={name}
-          height="100"
+          alt={pokemonName}
+          height="150"
           image={imageUrl}
+   
         />
-        <Typography>{name}</Typography>
+        <Typography>{pokemonName}</Typography>
       </CardActionArea>
     </Card>
   );
